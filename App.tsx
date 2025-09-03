@@ -3,13 +3,24 @@ import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   const age = 22; 
+  const licenseYears = 5;
   let feedback = '';
 
-  if (age >= 18) {
-    feedback = 'You are allowed to drive. YAY!'
-  } else {
-    feedback = 'You are not allowed to drive yet.'
-  }
+  if (age >= 18) 
+    if (licenseYears >= 3)
+    {
+      feedback = 'You are a qualified and safe driver.';
+    } else
+
+
+
+      {
+        feedback = 'You are allowed to drive. YAY!'
+        } 
+        else 
+        {
+          feedback = 'You are not allowed to drive yet.'
+        }
 
   return (
     <View style={styles.container}>
@@ -24,13 +35,14 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#38040E',
     alignItems: 'center',
     justifyContent: 'center',
   },
 
   response: {
     fontSize: 28,
+    color: '#FFFEE5'
 
   }
 });
